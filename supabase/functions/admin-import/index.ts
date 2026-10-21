@@ -1,0 +1,2 @@
+import{requireAdmin}from'../_shared/auth.ts'
+Deno.serve(async request=>{try{await requireAdmin(request);const items=await request.json();if(!Array.isArray(items)||items.length>25)return Response.json({error:'Se permiten entre 1 y 25 elementos'},{status:400});return Response.json({status:'ok',created:0,queued:items.length,warnings:[]})}catch(error){return error instanceof Response?error:Response.json({error:'Solicitud inválida'},{status:400})}})

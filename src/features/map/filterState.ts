@@ -1,0 +1,3 @@
+import type { BandFilters } from '../bands/types'
+export function parseMapFilters(search:string):BandFilters{const p=new URLSearchParams(search),decade=Number(p.get('decade'));return{...(p.get('genre')&&{genre:p.get('genre')!}),...(Number.isInteger(decade)&&decade>0&&{decade}),...(p.get('country')&&{country:p.get('country')!}),...(p.get('q')&&{query:p.get('q')!})}}
+export function serializeMapFilters(filters:BandFilters){const p=new URLSearchParams();if(filters.genre)p.set('genre',filters.genre);if(filters.decade)p.set('decade',String(filters.decade));if(filters.country)p.set('country',filters.country);if(filters.query)p.set('q',filters.query);const value=p.toString();return value?`?${value}`:''}

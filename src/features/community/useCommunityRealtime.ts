@@ -1,0 +1,2 @@
+import{useEffect}from'react';import{hasSupabase,supabase}from'../../lib/supabase';import type{Post}from'./communityApi'
+export function useCommunityRealtime(onEvent:(post:Post)=>void){useEffect(()=>{if(!hasSupabase)return;const channel=supabase.channel('community').on('postgres_changes',{event:'*',schema:'public',table:'topics'},payload=>onEvent(payload.new as Post)).subscribe();return()=>{void supabase.removeChannel(channel)}},[onEvent])}

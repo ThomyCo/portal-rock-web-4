@@ -1,0 +1,1 @@
+import{useAuth}from'./AuthProvider';export function ProfilePage(){const{profile,signOut}=useAuth();return <main className="page"><p className="eyebrow">PERFIL</p><h1>{profile?.display_name??'Mi cuenta'}</h1><p>@{profile?.username}</p><button className="button button-ghost" onClick={()=>void signOut()}>Cerrar sesión</button></main>}
