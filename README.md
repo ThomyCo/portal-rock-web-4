@@ -1,5 +1,9 @@
 # Portal Rock Web 4.0
 
+## Perfiles enriquecidos de bandas
+
+Los perfiles públicos guardan biografías originales e imágenes con atribución en Supabase. Para regenerar la migración desde el manifiesto revisado, define `ADMIN_CONTACT` y ejecuta `npm run content:bands`; revisa el reporte antes de publicar y luego aplica `npx supabase db push`.
+
 Aplicación contemporánea para explorar el origen geográfico de bandas, guardar favoritas y conversar en comunidad. Usa React, TypeScript, MapLibre, OpenFreeMap y Supabase con PostgreSQL/PostGIS.
 
 ## Ejecutar en la computadora

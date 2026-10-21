@@ -1,0 +1,596 @@
+[
+  {
+    "slug": "the-beatles",
+    "wikidataId": "Q1299",
+    "summary": "Liverpool transformó la música popular con canciones, estudio e imaginación.",
+    "biography": [
+      "The Beatles se formó en Liverpool en 1960. Liverpool transformó la música popular con canciones, estudio e imaginación. Su identidad surgió de la escena local y de una manera propia de combinar rock, pop-rock.",
+      "A lo largo de su trayectoria, The Beatles convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Beatles durante una presentación musical en directo",
+    "endedYear": 1970
+  },
+  {
+    "slug": "queen",
+    "wikidataId": "Q15862",
+    "summary": "Teatralidad y armonías que ampliaron los límites del rock.",
+    "biography": [
+      "Queen se formó en London en 1970. Teatralidad y armonías que ampliaron los límites del rock. Su identidad surgió de la escena local y de una manera propia de combinar rock, glam-rock.",
+      "A lo largo de su trayectoria, Queen convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Queen durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "the-rolling-stones",
+    "wikidataId": "Q11036",
+    "summary": "Blues, actitud y una carrera esencial para la historia del rock.",
+    "biography": [
+      "The Rolling Stones se formó en London en 1962. Blues, actitud y una carrera esencial para la historia del rock. Su identidad surgió de la escena local y de una manera propia de combinar rock.",
+      "A lo largo de su trayectoria, The Rolling Stones convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Rolling Stones durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "pink-floyd",
+    "wikidataId": "Q2306",
+    "summary": "Experimentación sonora y discos conceptuales de alcance universal.",
+    "biography": [
+      "Pink Floyd se formó en London en 1965. Experimentación sonora y discos conceptuales de alcance universal. Su identidad surgió de la escena local y de una manera propia de combinar progressive-rock, psychedelic-rock.",
+      "A lo largo de su trayectoria, Pink Floyd convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Pink Floyd durante una presentación musical en directo",
+    "endedYear": 2014
+  },
+  {
+    "slug": "led-zeppelin",
+    "wikidataId": "Q2331",
+    "summary": "Blues pesado, virtuosismo y una nueva escala para el rock.",
+    "biography": [
+      "Led Zeppelin se formó en London en 1968. Blues pesado, virtuosismo y una nueva escala para el rock. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, Led Zeppelin convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Led Zeppelin durante una presentación musical en directo",
+    "endedYear": 1980
+  },
+  {
+    "slug": "metallica",
+    "wikidataId": "Q15920",
+    "summary": "Velocidad, precisión y una nueva escala para el metal.",
+    "biography": [
+      "Metallica se formó en Los Angeles en 1981. Velocidad, precisión y una nueva escala para el metal. Su identidad surgió de la escena local y de una manera propia de combinar thrash-metal.",
+      "A lo largo de su trayectoria, Metallica convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Metallica durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "u2",
+    "wikidataId": "Q396",
+    "summary": "Una banda de Dublín con un sonido de alcance global.",
+    "biography": [
+      "U2 se formó en Dublin en 1976. Una banda de Dublín con un sonido de alcance global. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock.",
+      "A lo largo de su trayectoria, U2 convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "U2 durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "ac-dc",
+    "wikidataId": "Q27593",
+    "summary": "Riffs directos y una potencia inconfundible.",
+    "biography": [
+      "AC/DC se formó en Sydney en 1973. Riffs directos y una potencia inconfundible. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, AC/DC convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "AC/DC durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "guns-n-roses",
+    "wikidataId": "Q11895",
+    "summary": "La energía de Sunset Strip transformó el hard rock.",
+    "biography": [
+      "Guns N' Roses se formó en Los Angeles en 1985. La energía de Sunset Strip transformó el hard rock. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, Guns N' Roses convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Guns N' Roses durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "nirvana",
+    "wikidataId": "Q42927",
+    "summary": "Desde Aberdeen, el grunge cambió el pulso del rock mundial.",
+    "biography": [
+      "Nirvana se formó en Aberdeen en 1987. Desde Aberdeen, el grunge cambió el pulso del rock mundial. Su identidad surgió de la escena local y de una manera propia de combinar grunge, alternative-rock.",
+      "A lo largo de su trayectoria, Nirvana convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Nirvana durante una presentación musical en directo",
+    "endedYear": 1994
+  },
+  {
+    "slug": "coldplay",
+    "wikidataId": "Q45188",
+    "summary": "Melodías expansivas surgidas de la escena londinense.",
+    "biography": [
+      "Coldplay se formó en London en 1997. Melodías expansivas surgidas de la escena londinense. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock, pop-rock.",
+      "A lo largo de su trayectoria, Coldplay convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Coldplay durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "linkin-park",
+    "wikidataId": "Q261",
+    "summary": "Rock, electrónica y rap unidos para una nueva generación.",
+    "biography": [
+      "Linkin Park se formó en Agoura Hills en 1996. Rock, electrónica y rap unidos para una nueva generación. Su identidad surgió de la escena local y de una manera propia de combinar nu-metal, alternative-rock.",
+      "A lo largo de su trayectoria, Linkin Park convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Linkin Park durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "red-hot-chili-peppers",
+    "wikidataId": "Q10708",
+    "summary": "Funk y rock moldeados por la energía de Los Ángeles.",
+    "biography": [
+      "Red Hot Chili Peppers se formó en Los Angeles en 1983. Funk y rock moldeados por la energía de Los Ángeles. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock, funk-rock.",
+      "A lo largo de su trayectoria, Red Hot Chili Peppers convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Red Hot Chili Peppers durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "bon-jovi",
+    "wikidataId": "Q259254",
+    "summary": "Himnos de estadio surgidos en Nueva Jersey.",
+    "biography": [
+      "Bon Jovi se formó en Sayreville en 1983. Himnos de estadio surgidos en Nueva Jersey. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, Bon Jovi convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Bon Jovi durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "aerosmith",
+    "wikidataId": "Q126826",
+    "summary": "El rock de Boston encontró una voz áspera y duradera.",
+    "biography": [
+      "Aerosmith se formó en Boston en 1970. El rock de Boston encontró una voz áspera y duradera. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, Aerosmith convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Aerosmith durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "the-who",
+    "wikidataId": "Q93346",
+    "summary": "Potencia escénica y ambición narrativa desde Londres.",
+    "biography": [
+      "The Who se formó en London en 1964. Potencia escénica y ambición narrativa desde Londres. Su identidad surgió de la escena local y de una manera propia de combinar rock.",
+      "A lo largo de su trayectoria, The Who convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Who durante una presentación musical en directo",
+    "endedYear": 1983
+  },
+  {
+    "slug": "radiohead",
+    "wikidataId": "Q44190",
+    "summary": "Inquietud artística y reinvención constante desde Oxfordshire.",
+    "biography": [
+      "Radiohead se formó en Abingdon en 1985. Inquietud artística y reinvención constante desde Oxfordshire. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock.",
+      "A lo largo de su trayectoria, Radiohead convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Radiohead durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "green-day",
+    "wikidataId": "Q47871",
+    "summary": "El punk de East Bay llegó a una audiencia mundial.",
+    "biography": [
+      "Green Day se formó en Berkeley en 1987. El punk de East Bay llegó a una audiencia mundial. Su identidad surgió de la escena local y de una manera propia de combinar punk-rock.",
+      "A lo largo de su trayectoria, Green Day convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Green Day durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "foo-fighters",
+    "wikidataId": "Q483718",
+    "summary": "Guitarras y resistencia nacidas después de la era grunge.",
+    "biography": [
+      "Foo Fighters se formó en Seattle en 1994. Guitarras y resistencia nacidas después de la era grunge. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock.",
+      "A lo largo de su trayectoria, Foo Fighters convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Foo Fighters durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "iron-maiden",
+    "wikidataId": "Q42482",
+    "summary": "Narrativa, velocidad y una identidad central del heavy metal.",
+    "biography": [
+      "Iron Maiden se formó en London en 1975. Narrativa, velocidad y una identidad central del heavy metal. Su identidad surgió de la escena local y de una manera propia de combinar heavy-metal.",
+      "A lo largo de su trayectoria, Iron Maiden convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Iron Maiden durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "black-sabbath",
+    "wikidataId": "Q47670",
+    "summary": "El sonido industrial de Birmingham ayudó a crear el heavy metal.",
+    "biography": [
+      "Black Sabbath se formó en Birmingham en 1968. El sonido industrial de Birmingham ayudó a crear el heavy metal. Su identidad surgió de la escena local y de una manera propia de combinar heavy-metal.",
+      "A lo largo de su trayectoria, Black Sabbath convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Black Sabbath durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "deep-purple",
+    "wikidataId": "Q101505",
+    "summary": "Virtuosismo y volumen en los cimientos del hard rock.",
+    "biography": [
+      "Deep Purple se formó en Hertford en 1968. Virtuosismo y volumen en los cimientos del hard rock. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, Deep Purple convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Deep Purple durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "kiss",
+    "wikidataId": "Q124179",
+    "summary": "Espectáculo, maquillaje y rock de estadio desde Nueva York.",
+    "biography": [
+      "Kiss se formó en New York en 1973. Espectáculo, maquillaje y rock de estadio desde Nueva York. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock, glam-rock.",
+      "A lo largo de su trayectoria, Kiss convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Kiss durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "journey",
+    "wikidataId": "Q464749",
+    "summary": "Melodías de gran formato nacidas en San Francisco.",
+    "biography": [
+      "Journey se formó en San Francisco en 1973. Melodías de gran formato nacidas en San Francisco. Su identidad surgió de la escena local y de una manera propia de combinar rock, pop-rock.",
+      "A lo largo de su trayectoria, Journey convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Journey durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "pearl-jam",
+    "wikidataId": "Q142701",
+    "summary": "Una voz persistente de la explosión musical de Seattle.",
+    "biography": [
+      "Pearl Jam se formó en Seattle en 1990. Una voz persistente de la explosión musical de Seattle. Su identidad surgió de la escena local y de una manera propia de combinar grunge, alternative-rock.",
+      "A lo largo de su trayectoria, Pearl Jam convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Pearl Jam durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "the-eagles",
+    "wikidataId": "Q189635",
+    "summary": "Armonías californianas y canciones de carretera.",
+    "biography": [
+      "The Eagles se formó en Los Angeles en 1971. Armonías californianas y canciones de carretera. Su identidad surgió de la escena local y de una manera propia de combinar rock, country-rock.",
+      "A lo largo de su trayectoria, The Eagles convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Eagles durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "fleetwood-mac",
+    "wikidataId": "Q106648",
+    "summary": "Del blues británico a una obra pop de enorme influencia.",
+    "biography": [
+      "Fleetwood Mac se formó en London en 1967. Del blues británico a una obra pop de enorme influencia. Su identidad surgió de la escena local y de una manera propia de combinar rock, pop-rock.",
+      "A lo largo de su trayectoria, Fleetwood Mac convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Fleetwood Mac durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "oasis",
+    "wikidataId": "Q43742",
+    "summary": "Manchester recuperó la escala épica de la canción británica.",
+    "biography": [
+      "Oasis se formó en Manchester en 1991. Manchester recuperó la escala épica de la canción británica. Su identidad surgió de la escena local y de una manera propia de combinar britpop.",
+      "A lo largo de su trayectoria, Oasis convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Oasis durante una presentación musical en directo",
+    "endedYear": 2009
+  },
+  {
+    "slug": "rem",
+    "wikidataId": "Q134969",
+    "summary": "La escena universitaria de Athens abrió camino al rock alternativo.",
+    "biography": [
+      "R.E.M. se formó en Athens en 1980. La escena universitaria de Athens abrió camino al rock alternativo. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock.",
+      "A lo largo de su trayectoria, R.E.M. convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "R.E.M. durante una presentación musical en directo",
+    "endedYear": 2011
+  },
+  {
+    "slug": "imagine-dragons",
+    "wikidataId": "Q391348",
+    "summary": "Percusión y estribillos masivos desde Las Vegas.",
+    "biography": [
+      "Imagine Dragons se formó en Las Vegas en 2008. Percusión y estribillos masivos desde Las Vegas. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock, pop-rock.",
+      "A lo largo de su trayectoria, Imagine Dragons convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Imagine Dragons durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "maroon-5",
+    "wikidataId": "Q182223",
+    "summary": "Pop y funk convertidos en éxitos internacionales.",
+    "biography": [
+      "Maroon 5 se formó en Los Angeles en 1994. Pop y funk convertidos en éxitos internacionales. Su identidad surgió de la escena local y de una manera propia de combinar pop-rock.",
+      "A lo largo de su trayectoria, Maroon 5 convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Maroon 5 durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "arctic-monkeys",
+    "wikidataId": "Q170599",
+    "summary": "Crónicas urbanas y guitarras surgidas en Sheffield.",
+    "biography": [
+      "Arctic Monkeys se formó en Sheffield en 2002. Crónicas urbanas y guitarras surgidas en Sheffield. Su identidad surgió de la escena local y de una manera propia de combinar indie-rock.",
+      "A lo largo de su trayectoria, Arctic Monkeys convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Arctic Monkeys durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "muse",
+    "wikidataId": "Q22151",
+    "summary": "Dramatismo, electrónica y rock de gran escala.",
+    "biography": [
+      "Muse se formó en Teignmouth en 1994. Dramatismo, electrónica y rock de gran escala. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock, progressive-rock.",
+      "A lo largo de su trayectoria, Muse convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Muse durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "the-cure",
+    "wikidataId": "Q484427",
+    "summary": "Melancolía, textura y canciones que cruzaron géneros.",
+    "biography": [
+      "The Cure se formó en Crawley en 1978. Melancolía, textura y canciones que cruzaron géneros. Su identidad surgió de la escena local y de una manera propia de combinar post-punk, gothic-rock.",
+      "A lo largo de su trayectoria, The Cure convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Cure durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "depeche-mode",
+    "wikidataId": "Q482964",
+    "summary": "Sintetizadores y música popular de pulso oscuro.",
+    "biography": [
+      "Depeche Mode se formó en Basildon en 1980. Sintetizadores y música popular de pulso oscuro. Su identidad surgió de la escena local y de una manera propia de combinar synth-pop, new-wave.",
+      "A lo largo de su trayectoria, Depeche Mode convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Depeche Mode durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "blur",
+    "wikidataId": "Q412490",
+    "summary": "Observación británica, pop inquieto y reinvención musical.",
+    "biography": [
+      "Blur se formó en London en 1988. Observación británica, pop inquieto y reinvención musical. Su identidad surgió de la escena local y de una manera propia de combinar britpop, alternative-rock.",
+      "A lo largo de su trayectoria, Blur convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Blur durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "abba",
+    "wikidataId": "Q18233",
+    "summary": "Composición precisa y armonías que llevaron Suecia al mundo.",
+    "biography": [
+      "ABBA se formó en Stockholm en 1972. Composición precisa y armonías que llevaron Suecia al mundo. Su identidad surgió de la escena local y de una manera propia de combinar pop-rock.",
+      "A lo largo de su trayectoria, ABBA convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "ABBA durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "bee-gees",
+    "wikidataId": "Q133405",
+    "summary": "Armonías familiares que atravesaron décadas y estilos.",
+    "biography": [
+      "Bee Gees se formó en Redcliffe en 1958. Armonías familiares que atravesaron décadas y estilos. Su identidad surgió de la escena local y de una manera propia de combinar pop-rock, disco.",
+      "A lo largo de su trayectoria, Bee Gees convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Bee Gees durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "scorpions",
+    "wikidataId": "Q124147",
+    "summary": "Hard rock alemán con alcance mundial.",
+    "biography": [
+      "Scorpions se formó en Hannover en 1965. Hard rock alemán con alcance mundial. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock, heavy-metal.",
+      "A lo largo de su trayectoria, Scorpions convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Scorpions durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "evanescence",
+    "wikidataId": "Q1777698",
+    "summary": "Piano, metal y una voz distintiva desde Arkansas.",
+    "biography": [
+      "Evanescence se formó en Little Rock en 1995. Piano, metal y una voz distintiva desde Arkansas. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock, gothic-rock.",
+      "A lo largo de su trayectoria, Evanescence convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Evanescence durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "system-of-a-down",
+    "wikidataId": "Q45165",
+    "summary": "Ritmos extremos y conciencia política desde California.",
+    "biography": [
+      "System of a Down se formó en Glendale en 1994. Ritmos extremos y conciencia política desde California. Su identidad surgió de la escena local y de una manera propia de combinar alternative-metal.",
+      "A lo largo de su trayectoria, System of a Down convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "System of a Down durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "twenty-one-pilots",
+    "wikidataId": "Q7857806",
+    "summary": "Una mezcla flexible de rock, rap y electrónica.",
+    "biography": [
+      "Twenty One Pilots se formó en Columbus en 2009. Una mezcla flexible de rock, rap y electrónica. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock.",
+      "A lo largo de su trayectoria, Twenty One Pilots convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Twenty One Pilots durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "paramore",
+    "wikidataId": "Q473466",
+    "summary": "Energía punk y melodía desde Tennessee.",
+    "biography": [
+      "Paramore se formó en Franklin en 2004. Energía punk y melodía desde Tennessee. Su identidad surgió de la escena local y de una manera propia de combinar alternative-rock, pop-rock.",
+      "A lo largo de su trayectoria, Paramore convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Paramore durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "motley-crue",
+    "wikidataId": "Q486688",
+    "summary": "Exceso y glam metal desde Sunset Strip.",
+    "biography": [
+      "Mötley Crüe se formó en Los Angeles en 1981. Exceso y glam metal desde Sunset Strip. Su identidad surgió de la escena local y de una manera propia de combinar glam-metal.",
+      "A lo largo de su trayectoria, Mötley Crüe convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Mötley Crüe durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "the-doors",
+    "wikidataId": "Q45354",
+    "summary": "Poesía y psicodelia en el corazón de Los Ángeles.",
+    "biography": [
+      "The Doors se formó en Los Angeles en 1965. Poesía y psicodelia en el corazón de Los Ángeles. Su identidad surgió de la escena local y de una manera propia de combinar psychedelic-rock.",
+      "A lo largo de su trayectoria, The Doors convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Doors durante una presentación musical en directo",
+    "endedYear": 1973
+  },
+  {
+    "slug": "creedence-clearwater-revival",
+    "wikidataId": "Q192463",
+    "summary": "Rock de raíces y relatos de una América imaginada.",
+    "biography": [
+      "Creedence Clearwater Revival se formó en El Cerrito en 1967. Rock de raíces y relatos de una América imaginada. Su identidad surgió de la escena local y de una manera propia de combinar rock, roots-rock.",
+      "A lo largo de su trayectoria, Creedence Clearwater Revival convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Creedence Clearwater Revival durante una presentación musical en directo",
+    "endedYear": 1972
+  },
+  {
+    "slug": "van-halen",
+    "wikidataId": "Q190155",
+    "summary": "Una guitarra revolucionaria y energía californiana.",
+    "biography": [
+      "Van Halen se formó en Pasadena en 1972. Una guitarra revolucionaria y energía californiana. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock.",
+      "A lo largo de su trayectoria, Van Halen convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Van Halen durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "def-leppard",
+    "wikidataId": "Q182890",
+    "summary": "Producción monumental y rock melódico desde Sheffield.",
+    "biography": [
+      "Def Leppard se formó en Sheffield en 1976. Producción monumental y rock melódico desde Sheffield. Su identidad surgió de la escena local y de una manera propia de combinar hard-rock, glam-metal.",
+      "A lo largo de su trayectoria, Def Leppard convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Def Leppard durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "the-police",
+    "wikidataId": "Q178095",
+    "summary": "Reggae, punk y pop unidos por tres músicos en Londres.",
+    "biography": [
+      "The Police se formó en London en 1977. Reggae, punk y pop unidos por tres músicos en Londres. Su identidad surgió de la escena local y de una manera propia de combinar new-wave, rock.",
+      "A lo largo de su trayectoria, The Police convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "The Police durante una presentación musical en directo",
+    "endedYear": 1986
+  },
+  {
+    "slug": "genesis",
+    "wikidataId": "Q151012",
+    "summary": "Del rock progresivo al pop sofisticado.",
+    "biography": [
+      "Genesis se formó en Godalming en 1967. Del rock progresivo al pop sofisticado. Su identidad surgió de la escena local y de una manera propia de combinar progressive-rock.",
+      "A lo largo de su trayectoria, Genesis convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Genesis durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "soda-stereo",
+    "wikidataId": "Q1816849",
+    "summary": "El rock latino adquirió una dimensión continental.",
+    "biography": [
+      "Soda Stereo se formó en Buenos Aires en 1982. El rock latino adquirió una dimensión continental. Su identidad surgió de la escena local y de una manera propia de combinar rock-en-espanol, new-wave.",
+      "A lo largo de su trayectoria, Soda Stereo convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Soda Stereo durante una presentación musical en directo",
+    "endedYear": 1997
+  },
+  {
+    "slug": "caifanes",
+    "wikidataId": "Q1025839",
+    "summary": "Post punk, identidad mexicana y raíces latinoamericanas.",
+    "biography": [
+      "Caifanes se formó en Ciudad de México en 1987. Post punk, identidad mexicana y raíces latinoamericanas. Su identidad surgió de la escena local y de una manera propia de combinar rock-en-espanol, post-punk.",
+      "A lo largo de su trayectoria, Caifanes convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Caifanes durante una presentación musical en directo",
+    "endedYear": null
+  },
+  {
+    "slug": "heroes-del-silencio",
+    "wikidataId": "Q1434852",
+    "summary": "Una voz esencial del rock en español.",
+    "biography": [
+      "Héroes del Silencio se formó en Zaragoza en 1984. Una voz esencial del rock en español. Su identidad surgió de la escena local y de una manera propia de combinar rock-en-espanol.",
+      "A lo largo de su trayectoria, Héroes del Silencio convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Héroes del Silencio durante una presentación musical en directo",
+    "endedYear": 1996
+  },
+  {
+    "slug": "mana",
+    "wikidataId": "Q584066",
+    "summary": "Rock mexicano proyectado a todo el continente.",
+    "biography": [
+      "Maná se formó en Guadalajara en 1986. Rock mexicano proyectado a todo el continente. Su identidad surgió de la escena local y de una manera propia de combinar rock-en-espanol, pop-rock.",
+      "A lo largo de su trayectoria, Maná convirtió esa propuesta en canciones y presentaciones reconocibles. Su obra dejó una referencia duradera para artistas y públicos de distintas generaciones."
+    ],
+    "imageAlt": "Maná durante una presentación musical en directo",
+    "endedYear": null
+  }
+]

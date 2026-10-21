@@ -11,7 +11,8 @@
     "test": "jest --runInBand",
     "test:run": "jest --runInBand",
     "test:e2e": "playwright test"
-    ,"import:v3": "node --experimental-strip-types scripts/import-v3.ts"
+    ,"import:v3": "node --experimental-strip-types scripts/import-v3.ts",
+    "content:bands": "node --experimental-strip-types scripts/build-band-profile-migration.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",

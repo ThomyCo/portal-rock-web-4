@@ -58,5 +58,6 @@ const catalog: SeedBand[] = [
 ]
 export const demoBands: BandDetail[] = catalog.map(([slug,name,formationYear,countryCode,city,longitude,latitude,genres,summary],index)=>({
  id:`00000000-0000-4000-8000-${String(index+1).padStart(12,'0')}`,slug,name,formationYear,countryCode,city,longitude,latitude,genres,summary,
- biography:`${summary} Este perfil reúne datos editoriales y referencias abiertas.`,sourceUrl:`https://musicbrainz.org/search?query=${encodeURIComponent(name)}&type=artist`,heroImageUrl:null,albums:[]
+ biography:`${summary} Este perfil reúne datos editoriales y referencias abiertas.`,sourceUrl:`https://musicbrainz.org/search?query=${encodeURIComponent(name)}&type=artist`,heroImageUrl:null,albums:[],
+ endedYear:null,imageSourceUrl:null,imageAuthor:null,imageLicense:null,imageAlt:null
 }))
