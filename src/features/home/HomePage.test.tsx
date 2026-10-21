@@ -1,6 +1,7 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { HomePage } from './HomePage'
+import { cityGroupFor } from './MexicoEvents'
 import { useHomeContent } from './useHomeContent'
 
 jest.mock('./useHomeContent',()=>({useHomeContent:jest.fn()}))
@@ -16,6 +17,13 @@ const content = {
 }
 
 beforeEach(()=>mocked.mockReturnValue({data:content,isLoading:false,error:null} as ReturnType<typeof useHomeContent>))
+
+test('groups the main Mexican concert cities and keeps the rest together',()=>{
+  expect(cityGroupFor('Ciudad de México')).toBe('cdmx')
+  expect(cityGroupFor('Monterrey')).toBe('monterrey')
+  expect(cityGroupFor('Guadalajara')).toBe('guadalajara')
+  expect(cityGroupFor('Puebla')).toBe('otras')
+})
 
 test('renders the featured story, Mexico first, and portal connections',()=>{
   render(<MemoryRouter><HomePage/></MemoryRouter>)
