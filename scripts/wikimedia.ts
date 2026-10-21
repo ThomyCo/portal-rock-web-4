@@ -8,9 +8,28 @@ export async function fetchWikidataImage(qid: string, fetcher: typeof fetch = fe
   if (!/^Q[1-9]\d*$/.test(qid)) throw new Error('QID inválido')
   const url = new URL('https://www.wikidata.org/w/api.php')
   url.search = new URLSearchParams({ action: 'wbgetentities', format: 'json', props: 'claims', ids: qid }).toString()
-  const response = await fetcher(url)
+  let response:Response | undefined
+  for (let attempt = 0; attempt < 4; attempt++) {
+    response = await fetcher(url)
+    if (response.status !== 429) break
+    const seconds = Number(response.headers?.get('retry-after') ?? 1)
+    await new Promise((resolve) => setTimeout(resolve, Math.max(0, seconds * 1000)))
+  }
+  if (!response) throw new Error('Wikidata sin respuesta')
   if (!response.ok) throw new Error(`Wikidata HTTP ${response.status}`)
   return (await response.json()).entities?.[qid]?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? null
+}
+
+export async function fetchWikidataImages(qids:string[], fetcher:typeof fetch=fetch){
+ const result=new Map<string,string|null>()
+ for(let index=0;index<qids.length;index+=50){
+  const batch=qids.slice(index,index+50); if(batch.some(q=>!/^Q[1-9]\d*$/.test(q))) throw new Error('QID inválido')
+  const url=new URL('https://www.wikidata.org/w/api.php'); url.search=new URLSearchParams({action:'wbgetentities',format:'json',props:'claims',ids:batch.join('|')}).toString()
+  const response=await fetcher(url); if(!response.ok) throw new Error(`Wikidata HTTP ${response.status}`)
+  const entities=(await response.json()).entities??{}
+  batch.forEach(qid=>result.set(qid,entities[qid]?.claims?.P18?.[0]?.mainsnak?.datavalue?.value??null))
+ }
+ return result
 }
 
 export async function fetchCommonsMetadata(fileTitle: string, contact: string, fetcher: typeof fetch = fetch): Promise<CommonsMedia> {
