@@ -81,3 +81,15 @@ from public.bands b
 join public.places p on p.name = b.name || ' · origen'
 where b.published
 on conflict do nothing;
+
+insert into public.rock_news_sources
+  (name, feed_url, site_url, country_code, language_code, allowed_categories, active)
+values
+  ('iHeartRadio México · Loud Metal', 'https://iheartradio.mx/feed-loud-metal-radio/noticias/', 'https://iheartradio.mx/', 'MX', 'es', array['mexico','releases','festivals'], true),
+  ('NME', 'https://www.nme.com/feed', 'https://www.nme.com/', 'GB', 'en', array['international','releases','festivals'], true)
+on conflict (feed_url) do update set
+  name = excluded.name,
+  site_url = excluded.site_url,
+  allowed_categories = excluded.allowed_categories,
+  active = excluded.active,
+  updated_at = now();
