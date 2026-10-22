@@ -3,14 +3,19 @@ import { requireAdmin } from '../_shared/auth.ts'
 import { SyncConflictError, syncRockContent } from '../_shared/rock-content/sync.ts'
 import type { NormalizedRockArticle, NormalizedRockEvent } from '../_shared/rock-content/types.ts'
 
-const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })
+const corsHeaders = { 'access-control-allow-origin': '*', 'access-control-allow-headers': 'authorization, apikey, content-type, x-client-info, x-sync-secret', 'access-control-allow-methods': 'POST, OPTIONS' }
+const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', ...corsHeaders } })
 
 Deno.serve(async request => {
+  if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders })
   if (request.method !== 'POST') return json({ error: 'Método no permitido' }, 405)
   const syncSecret = Deno.env.get('SYNC_CONTENT_SECRET')
   const scheduled = Boolean(syncSecret && request.headers.get('x-sync-secret') === syncSecret)
   if (!scheduled) {
-    try { await requireAdmin(request) } catch (response) { return response as Response }
+    try { await requireAdmin(request) } catch (response) {
+      const original = response as Response
+      return new Response(original.body, { status: original.status, headers: { ...Object.fromEntries(original.headers), ...corsHeaders } })
+    }
   }
   const url = Deno.env.get('SUPABASE_URL')
   const serviceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
@@ -23,7 +28,7 @@ Deno.serve(async request => {
     latitude:event.latitude,longitude:event.longitude,image_url:event.imageUrl,ticket_url:event.ticketUrl,genres:event.genres,scope:event.scope,
     status:event.status,source_updated_at:event.sourceUpdatedAt,last_seen_at:event.lastSeenAt,updated_at:new Date().toISOString(),
   })
-  const mapArticle = (article: NormalizedRockArticle) => ({
+  const mapNewArticle = (article: NormalizedRockArticle) => ({
     source_id:article.sourceId,canonical_url:article.canonicalUrl,url_hash:article.urlHash,title:article.title,summary:article.summary,
     image_url:article.imageUrl,published_at:article.publishedAt,fetched_at:article.fetchedAt,category:article.category,updated_at:new Date().toISOString(),
   })
@@ -31,10 +36,24 @@ Deno.serve(async request => {
     const summary = await syncRockContent({
       now: () => new Date(), sleep: ms => new Promise(resolve => setTimeout(resolve, ms)), ticketmasterKey,
       fetchResponse: (target, init) => fetch(target, init),
-      tryStartRun: async trigger => { const { data, error } = await client.from('content_sync_runs').insert({ trigger_kind:trigger,status:'running' }).select('id').single(); if(error?.code==='23505')return null;if(error)throw error;return data.id },
+      tryStartRun: async trigger => {
+        await client.from('content_sync_runs').update({ status:'failed',finished_at:new Date().toISOString(),error_summary:'Ejecución abandonada recuperada automáticamente.' }).eq('status','running').lt('started_at',new Date(Date.now()-30*60*1000).toISOString())
+        const { data, error } = await client.from('content_sync_runs').insert({ trigger_kind:trigger,status:'running' }).select('id').single(); if(error?.code==='23505')return null;if(error)throw error;return data.id
+      },
       listSources: async () => { const {data,error}=await client.from('rock_news_sources').select('id,name,feed_url,country_code,allowed_categories').eq('active',true);if(error)throw error;return(data??[]).map(row=>({id:row.id,name:row.name,feedUrl:row.feed_url,countryCode:row.country_code,allowedCategories:row.allowed_categories})) },
       upsertEvents: async events => { if(!events.length)return{inserted:0,updated:0};const{error}=await client.from('rock_events').upsert(events.map(mapEvent),{onConflict:'provider,external_id'});if(error)throw error;return{inserted:0,updated:events.length} },
-      upsertArticles: async articles => { if(!articles.length)return{inserted:0,updated:0};const{error}=await client.from('rock_news').upsert(articles.map(mapArticle),{onConflict:'url_hash'});if(error)throw error;return{inserted:0,updated:articles.length} },
+      upsertArticles: async articles => {
+        if(!articles.length)return{inserted:0,updated:0}
+        const hashes=articles.map(article=>article.urlHash)
+        const{data:existing,error:readError}=await client.from('rock_news').select('url_hash').in('url_hash',hashes);if(readError)throw readError
+        const existingHashes=new Set((existing??[]).map(row=>row.url_hash))
+        const fresh=articles.filter(article=>!existingHashes.has(article.urlHash))
+        if(fresh.length){const{error}=await client.from('rock_news').insert(fresh.map(mapNewArticle));if(error)throw error}
+        const updates=articles.filter(article=>existingHashes.has(article.urlHash))
+        const results=await Promise.all(updates.map(article=>client.from('rock_news').update({canonical_url:article.canonicalUrl,image_url:article.imageUrl,published_at:article.publishedAt,fetched_at:article.fetchedAt,updated_at:new Date().toISOString()}).eq('url_hash',article.urlHash)))
+        const failed=results.find(result=>result.error);if(failed?.error)throw failed.error
+        return{inserted:fresh.length,updated:updates.length}
+      },
       markSourceResult: async (id,errorMessage) => { const{error}=await client.from('rock_news_sources').update({last_success_at:errorMessage?undefined:new Date().toISOString(),last_error:errorMessage,updated_at:new Date().toISOString()}).eq('id',id);if(error)throw error },
       finishRun: async (id,summary) => { const{error}=await client.from('content_sync_runs').update({status:summary.status,finished_at:new Date().toISOString(),inserted_counts:summary.inserted,updated_counts:summary.updated,warnings:summary.warnings}).eq('id',id);if(error)throw error },
     }, { triggerKind: scheduled ? 'cron' : 'manual' })

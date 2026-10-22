@@ -117,14 +117,23 @@ select id, provider, external_id, name, artist_name, description, starts_at,
 from public.rock_events
 where starts_at >= now() and not hidden;
 
+create or replace view public.public_rock_news_sources
+with (security_invoker = false) as
+select id, name, site_url
+from public.rock_news_sources
+where active;
+
 create or replace view public.public_rock_news
 with (security_invoker = true) as
 select n.id, n.canonical_url, n.title, n.summary, n.image_url, n.published_at,
   n.category, n.featured, n.editorial_order, n.updated_at,
   s.name as source_name, s.site_url as source_site_url
 from public.rock_news n
-join public.rock_news_sources s on s.id = n.source_id
+join public.public_rock_news_sources s on s.id = n.source_id
 where n.status = 'approved';
+
+comment on view public.public_rock_news_sources is
+  'Public projection owned by the migration role; exposes only safe metadata for active sources.';
 
 create or replace function private.is_admin()
 returns boolean language sql stable security definer set search_path = '' as $$
@@ -240,6 +249,7 @@ end $$;
 grant select on public.rock_events, public.rock_news to anon, authenticated;
 grant select on public.rock_news_sources, public.content_sync_runs to authenticated;
 grant select on public.public_rock_events, public.public_rock_news to anon, authenticated;
+grant select on public.public_rock_news_sources to anon, authenticated;
 revoke all on public.rock_news_sources from anon, authenticated;
 grant select on public.rock_news_sources to authenticated;
 revoke all on public.content_sync_runs from anon, authenticated;

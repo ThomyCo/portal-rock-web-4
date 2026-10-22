@@ -49,3 +49,24 @@ test('rejects insecure article links', async () => {
   const xml = `<rss><channel><item><title>Unsafe</title><link>http://rock.test/a</link><description>Text</description><pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate></item></channel></rss>`
   await expect(parseRockFeed(xml, source, new Date())).resolves.toEqual([])
 })
+
+test('deduplicates tracking variants within the same feed', async () => {
+  const xml = `<rss><channel>
+    <item><title>Nota</title><link>https://rock.test/a?utm_source=one</link><pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate></item>
+    <item><title>Nota repetida</title><link>https://rock.test/a?utm_source=two</link><pubDate>Wed, 21 Oct 2026 10:00:00 GMT</pubDate></item>
+  </channel></rss>`
+  const items = await parseRockFeed(xml, source, new Date('2026-10-21T12:00:00Z'))
+  expect(items).toHaveLength(1)
+})
+
+test('derives Mexico scope from venue country and rejects invalid dates', () => {
+  const payload = { _embedded: { events: [{
+    id: 'mx-global', name: 'Rock MX', url: 'https://tickets.test/mx-global',
+    dates: { start: { dateTime: 'garbage' } },
+    classifications: [{ genre: { name: 'Rock' } }],
+    _embedded: { venues: [{ country: { countryCode: 'MX' } }] },
+  }] } }
+  expect(normalizeTicketmasterEvents(payload, 'international', new Date())).toEqual([])
+  payload._embedded.events[0].dates.start.dateTime = '2026-11-01T02:00:00Z'
+  expect(normalizeTicketmasterEvents(payload, 'international', new Date())[0].scope).toBe('mexico')
+})

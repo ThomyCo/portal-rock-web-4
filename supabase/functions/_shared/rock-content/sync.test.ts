@@ -81,3 +81,23 @@ test('returns conflict before calling providers when another run is active', asy
     .rejects.toMatchObject({ name: 'SyncConflictError' })
   expect(fetched).toBe(false)
 })
+
+test('retries network failures and finalizes a run when source discovery fails', async () => {
+  let attempts = 0
+  const finished: any[] = []
+  const retrying = deps({
+    fetchResponse: async url => {
+      if (url.includes('ticketmaster')) return response(JSON.stringify({ _embedded: { events: [] } }))
+      attempts++
+      if (attempts < 3) throw new DOMException('timeout', 'AbortError')
+      return response('<rss><channel></channel></rss>')
+    },
+  })
+  await syncRockContent(retrying, { triggerKind: 'manual' })
+  expect(attempts).toBe(3)
+
+  const failing = deps({ listSources: async () => { throw new Error('database unavailable') }, finishRun: async (...args) => { finished.push(args) } })
+  const result = await syncRockContent(failing, { triggerKind: 'manual' })
+  expect(result.status).toBe('partial')
+  expect(finished).toHaveLength(1)
+})

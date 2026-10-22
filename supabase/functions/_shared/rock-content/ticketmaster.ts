@@ -1,4 +1,4 @@
-import type { EventScope, EventStatus, NormalizedRockEvent } from './types'
+import type { EventScope, EventStatus, NormalizedRockEvent } from './types.ts'
 
 const ROCK_TERMS = ['rock', 'metal', 'punk', 'alternative', 'alternativo']
 
@@ -32,7 +32,7 @@ export function normalizeTicketmasterEvents(payload: unknown, scope: EventScope,
     if (!genres.some(genre => ROCK_TERMS.some(term => genre.includes(term)))) return []
     const ticketUrl = https(event.url)
     const startsAt = object(object(event.dates).start).dateTime
-    if (!ticketUrl || typeof startsAt !== 'string' || typeof event.id !== 'string') return []
+    if (!ticketUrl || typeof startsAt !== 'string' || Number.isNaN(Date.parse(startsAt)) || typeof event.id !== 'string') return []
     const embedded = object(event._embedded)
     const venue = object(Array.isArray(embedded.venues) ? embedded.venues[0] : null)
     const attraction = object(Array.isArray(embedded.attractions) ? embedded.attractions[0] : null)
@@ -40,6 +40,7 @@ export function normalizeTicketmasterEvents(payload: unknown, scope: EventScope,
     const images = Array.isArray(event.images) ? event.images : []
     const image = [...images].sort((a, b) => Number(object(b).width || 0) - Number(object(a).width || 0)).find(item => https(object(item).url))
     const numberOrNull = (value: unknown) => value == null || value === '' || !Number.isFinite(Number(value)) ? null : Number(value)
+    const countryCode = String(object(venue.country).countryCode || (scope === 'mexico' ? 'MX' : 'XX')).toUpperCase()
     return [{
       provider: 'ticketmaster' as const,
       externalId: event.id,
@@ -51,13 +52,13 @@ export function normalizeTicketmasterEvents(payload: unknown, scope: EventScope,
       venueName: String(venue.name || 'Recinto por confirmar'),
       city: String(object(venue.city).name || 'Ciudad por confirmar'),
       state: typeof object(venue.state).name === 'string' ? object(venue.state).name : null,
-      countryCode: String(object(venue.country).countryCode || (scope === 'mexico' ? 'MX' : 'XX')).toUpperCase(),
+      countryCode,
       latitude: numberOrNull(location.latitude),
       longitude: numberOrNull(location.longitude),
       imageUrl: image ? https(object(image).url) : null,
       ticketUrl,
       genres: [...new Set(genres)],
-      scope,
+      scope: countryCode === 'MX' ? 'mexico' : 'international',
       status: statusOf(object(object(event.dates).status).code),
       sourceUpdatedAt: typeof event._dates === 'object' && typeof object(event._dates).lastUpdated === 'string' ? object(event._dates).lastUpdated : null,
       lastSeenAt: fetchedAt.toISOString(),

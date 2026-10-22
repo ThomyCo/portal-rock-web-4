@@ -1,5 +1,5 @@
-import type { NewsCategory, NormalizedRockArticle, RockNewsSourceInput } from './types'
-import { canonicalizeArticleUrl } from './urls'
+import type { NewsCategory, NormalizedRockArticle, RockNewsSourceInput } from './types.ts'
+import { canonicalizeArticleUrl } from './urls.ts'
 
 function decode(value: string) {
   return value
@@ -40,6 +40,7 @@ function categoryFor(block: string, source: RockNewsSourceInput): NewsCategory {
 export async function parseRockFeed(xml: string, source: RockNewsSourceInput, fetchedAt: Date): Promise<NormalizedRockArticle[]> {
   const blocks = [...xml.matchAll(/<(item|entry)\b[^>]*>([\s\S]*?)<\/\1>/gi)].map(match => match[2])
   const results: NormalizedRockArticle[] = []
+  const seenHashes = new Set<string>()
   for (const block of blocks) {
     const title = element(block, ['title'])
     const rawUrl = link(block)
@@ -47,6 +48,8 @@ export async function parseRockFeed(xml: string, source: RockNewsSourceInput, fe
     if (!title || !rawUrl || !date || Number.isNaN(Date.parse(date))) continue
     try {
       const canonical = await canonicalizeArticleUrl(rawUrl)
+      if (seenHashes.has(canonical.hash)) continue
+      seenHashes.add(canonical.hash)
       results.push({
         sourceId: source.id,
         canonicalUrl: canonical.url,
