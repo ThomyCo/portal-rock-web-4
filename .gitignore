@@ -5,6 +5,7 @@ dist/
 .superpowers/
 playwright-report/
 test-results/
+.playwright/
 migration-reports/*.json
 .deno-cache/
 .npm-cache/

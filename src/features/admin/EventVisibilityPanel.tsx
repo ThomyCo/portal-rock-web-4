@@ -1,0 +1,3 @@
+import type { useContentAdmin } from './useContentAdmin'
+type Manager=ReturnType<typeof useContentAdmin>
+export function EventVisibilityPanel({manager}:{manager:Manager}){const events=(manager.events.data??[]) as any[];return <section id="eventos" className="admin-card"><h2>Eventos importados</h2>{events.length===0?<p>No hay eventos importados.</p>:<div className="admin-list">{events.map(event=><article key={event.id}><h3>{event.name}</h3><p>{event.venue_name} · {event.city}</p><button onClick={()=>{if(confirm(event.hidden?'¿Volver a mostrar el evento?':'¿Ocultar este evento?'))manager.hideEvent.mutate({id:event.id,hidden:!event.hidden})}}>{event.hidden?'Mostrar':'Ocultar'}</button></article>)}</div>}</section>}
