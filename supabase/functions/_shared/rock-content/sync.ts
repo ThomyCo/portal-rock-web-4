@@ -56,10 +56,11 @@ export async function syncRockContent(deps: SyncDependencies, request: { trigger
   const summary: SyncSummary = { status: 'succeeded', inserted: { events: 0, news: 0 }, updated: { events: 0, news: 0 }, warnings: [] }
   let successes = 0
   const now = deps.now()
+  const ticketmasterStart = now.toISOString().replace(/\.\d{3}Z$/, 'Z')
   const base = 'https://app.ticketmaster.com/discovery/v2/events.json'
   const eventQueries = [
-    `${base}?apikey=${encodeURIComponent(deps.ticketmasterKey)}&countryCode=MX&classificationName=rock&startDateTime=${encodeURIComponent(now.toISOString())}&size=100&sort=date,asc`,
-    `${base}?apikey=${encodeURIComponent(deps.ticketmasterKey)}&classificationName=rock&startDateTime=${encodeURIComponent(now.toISOString())}&size=20&sort=date,asc`,
+    `${base}?apikey=${encodeURIComponent(deps.ticketmasterKey)}&countryCode=MX&classificationName=rock&startDateTime=${encodeURIComponent(ticketmasterStart)}&size=100&sort=date,asc`,
+    `${base}?apikey=${encodeURIComponent(deps.ticketmasterKey)}&classificationName=rock&startDateTime=${encodeURIComponent(ticketmasterStart)}&size=20&sort=date,asc`,
   ]
   for (const [index, url] of eventQueries.entries()) {
     try {

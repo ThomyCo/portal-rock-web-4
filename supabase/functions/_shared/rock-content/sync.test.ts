@@ -29,6 +29,7 @@ test('queries Mexico first and then a limited international rock selection', asy
   await syncRockContent(input, { triggerKind: 'cron' })
   expect(urls[0]).toContain('countryCode=MX')
   expect(urls[0]).toContain('classificationName=rock')
+  expect(new URL(urls[0]).searchParams.get('startDateTime')).toBe('2026-10-21T12:00:00Z')
   expect(urls[1]).toContain('size=20')
   expect(urls[1]).not.toContain('countryCode=MX')
 })
